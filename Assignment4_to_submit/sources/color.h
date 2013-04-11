@@ -18,9 +18,6 @@ class color{
     float set_color_blue(float the_blue){blue = the_blue;}
     float set_color_speical(float the_special){special = the_special;}
 
-    float bright(){
-        return (red+green+blue)/3; 
-    }
     color color_scalar (float scalar){
         return color (red*scalar, green*scalar, blue*scalar, special);
     }
@@ -30,9 +27,7 @@ class color{
     color color_multi(color _color){
         return color(red * _color.get_color_red(), green * _color.get_color_green(), blue * _color.get_color_blue(), special);
     }
-    color color_average(color _color){
-        return color((red + _color.get_color_red())/2, (green + _color.get_color_green())/2, (blue + _color.get_color_blue())/2, special);
-    }
+    
     color clip(){
         float alllight = red + green + blue;
         float excesslight = alllight - 1;
